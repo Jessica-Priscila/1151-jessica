@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <Main>
+      <h1>Controle de salário</h1>
+      <button onclick="botão()">Contolar Salário</button>
+      <p id="Resultado">O resultado vai aparecer aqui</p>
+   </Main>
+   <script>
+      let resultado = document.getElementById("Resultado")
+      function botão() {
+         let nome = window.prompt("Nome do funcionário")
+         let sale = Number(window.prompt("Salário do funcionário"))
+         let porcentagem = window.prompt("Qual a porcentagem salarial")
+         let calc = (sale * porcentagem) /100
+         let caio = (sale + calc)
+
+         resultado.innerHTML = `O funcionário ${nome}`
+      }
+   </script>
+</body>
+</html>
