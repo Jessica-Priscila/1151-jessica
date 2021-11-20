@@ -9,7 +9,7 @@
 <body>
    <Main>
       <h1>Controle de salário</h1>
-      <button onclick="botão()">Contolar Salário</button>
+      <button onclick="botão()">Controlar Salário</button>
       <p id="Resultado">O resultado vai aparecer aqui</p>
    </Main>
    <script>
@@ -19,9 +19,9 @@
          let sale = Number(window.prompt("Salário do funcionário"))
          let porcentagem = window.prompt("Qual a porcentagem salarial")
          let calc = (sale * porcentagem) /100
-         let caio = (sale + calc)
+         let mudança = (sale + calc)
 
-         resultado.innerHTML = `O funcionário ${nome}`
+         resultado.innerHTML = `O funcionário ${nome} ganhava R$ ${(sale).toFixed(2)} por mês. Agora,com um reajuste de ${porcentagem}%, ele passará a ganhar R$ ${(calc).toFixed(2)} a mais e terá um novo salário de R$ ${(mudança).toFixed(2)}`
       }
    </script>
 </body>
