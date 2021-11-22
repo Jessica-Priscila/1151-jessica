@@ -4,12 +4,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>LTPW </title>
 </head>
+<style>
+body{
+         background-image: url(imagens/image.jpg);
+
+         background-repeat: no-repeat;
+         background-size: cover;
+         background-position: top center;
+         background-attachment: fixed;
+      
+      }
+      main{
+         text-align: center;
+         
+      }
+      div{
+      background-color: rgb(138, 172, 216);
+      }
+      button{
+         background-color:pink;
+      }
+
+</style>
 <body>
-    <h1>Jéssica </h1>
+    <div>
+    <main>
+        <h1>Calculadora Especial</h1>
+        <button onclick="botão()">Calcular</button>
+        <p id="Resultado">O resultado vai aparecer aqui</p>
+    </main>
     <script>
-        alert(" site criado por Jéssica")
+        let resultado = document.getElementById("Resultado")
+      function botão() {
+let sale = Number(window.prompt("Digite o primeiro número"))
+let sale2 = Number(window.prompt("Digite o segundo número"))
+let calc = (sale + sale2) 
+let calc1 = (sale * sale2) 
+let calc2 = (sale / sale2) 
+let calc3 = (sale ** sale2)
+resultado.innerHTML = `A soma vale ${sale} + ${sale2} = ${calc} <br>
+A multiplicação vale ${sale} x ${sale2} = ${calc1} <br>
+A divisão vale ${sale} : ${sale2} = ${calc2} <br>
+A potencia vale ${sale} ^ ${sale2} = ${calc3}
+`
+
+      }
+      
+
     </script>
+    </div>
 </body>
 </html>
