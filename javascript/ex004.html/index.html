@@ -5,8 +5,30 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Document</title>
+   <style>
+      body{
+         background-image: url(imagens/rai.jpg);
+
+         background-repeat: no-repeat;
+         background-size: cover;
+         background-position: top center;
+         background-attachment: fixed;
+      
+      }
+      main{
+         text-align: center;
+         
+      }
+      div{
+      background-color: white;
+      }
+      button{
+         background-color:pink;
+      }
+   </style>
 </head>
 <body>
+   <div>
    <Main>
       <h1>Controle de salário</h1>
       <button onclick="botão()">Controlar Salário</button>
@@ -21,8 +43,13 @@
          let calc = (sale * porcentagem) /100
          let mudança = (sale + calc)
 
-         resultado.innerHTML = `O funcionário ${nome} ganhava R$ ${(sale).toFixed(2)} por mês. Agora,com um reajuste de ${porcentagem}%, ele passará a ganhar R$ ${(calc).toFixed(2)} a mais e terá um novo salário de R$ ${(mudança).toFixed(2)}`
+         resultado.innerHTML = `O funcionário ${nome} ganhava R$ 
+         ${(sale).toFixed(2)} por mês.<br> Agora,com um reajuste de 
+         ${porcentagem}%, ele passará a ganhar R$ 
+         ${(calc).toFixed(2)} a mais e terá um novo salário de <br> R$ 
+         ${(mudança).toFixed(2)}`
       }
    </script>
+   </div>
 </body>
 </html>
