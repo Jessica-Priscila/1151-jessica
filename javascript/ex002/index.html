@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Especial</title>
+</head>
+<body>
+    <main>
+        <h1>Calculadora Especial</h1>
+        <label for="cod">Primeiro número</label>
+        <input type="number" name="n0" id="n0">
+        <br>
+        <label for="cold">Segundo número</label>
+        <input type="number" name="n1" id="n1">
+        <button onclick="calc()">Calcular</button>
+        <p id="res"></p>
+    </main>
+    <script>
+        function calc() {
+            let n0 = Number(document.getElementById("n0").value)
+            let n1 = Number(document.getElementById("n1").value)
+            let s = n0 + n1
+            let prod = n0 * n1 
+            let div = n0 / n1
+            let pot = n1 ** n2
+
+            let res = document.getElementById("res")
+
+            res.innerHTML = `A soma vale ${n0} + ${n1} = ${s} <br> O produto vale ${n0} X ${n1} = ${prod} <br> A divisão vale ${n0}/${n1} = ${div} <br> A potência vale ${n0}<sup>${n1}</sup> = ${pot} `
+        }
+    </script>
+</body>
+</html>
