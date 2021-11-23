@@ -5,6 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora Especial</title>
+    <style>
+        body {
+            background-image: linear-gradient(#F29985, #F2BBA7);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: top center;
+            background-attachment: fixed;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        main{
+            text-align: center;
+            background-color: white;
+            border-radius: 10px;
+            display: block;
+            margin-left: 300px;
+            margin-right: 300px;
+            padding: 6px;
+        }
+        div{
+            background-color: rgb(138, 172, 216);
+        }
+        button {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: violet;
+        }
+            
+
+    </style>
 </head>
 <body>
     <main>
@@ -12,23 +40,24 @@
         <label for="cod">Primeiro número</label>
         <input type="number" name="n0" id="n0">
         <br>
-        <label for="cold">Segundo número</label>
-        <input type="number" name="n1" id="n1">
-        <button onclick="calc()">Calcular</button>
-        <p id="res"></p>
+        <br><label for="cold">Segundo número</label>
+        <input type="number" name="n1" id="n1"><br>
+        <br><button onclick="calc()">CALCULAR</button>
+        <p id="res">O resultado vai aparecer aqui</p> <br> <br>
     </main>
     <script>
+        let res = document.getElementById("res")
         function calc() {
             let n0 = Number(document.getElementById("n0").value)
             let n1 = Number(document.getElementById("n1").value)
             let s = n0 + n1
             let prod = n0 * n1 
             let div = n0 / n1
-            let pot = n1 ** n2
+            let pot = n0 ** n1
+            
+            res.innerHTML = `A soma vale ${n0} + ${n1} = ${s} <br> O produto vale ${n0} x ${n1} = ${prod} <br> A divisão vale ${n0}/${n1} = ${div} <br> A potência vale ${n0}<sup>${n1}</sup> = ${pot} `
 
-            let res = document.getElementById("res")
-
-            res.innerHTML = `A soma vale ${n0} + ${n1} = ${s} <br> O produto vale ${n0} X ${n1} = ${prod} <br> A divisão vale ${n0}/${n1} = ${div} <br> A potência vale ${n0}<sup>${n1}</sup> = ${pot} `
+            
         }
     </script>
 </body>
